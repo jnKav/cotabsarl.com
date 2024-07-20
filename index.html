@@ -98,8 +98,8 @@
                                  <h1 class="banner_taital">SERVICES DE CONSTRUCTION</h1>
                                  <p class="banner_text">L'entreprise est spécialisée la construction de bâtiments, la réalisation de travaux publics... </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="#">Contactez-nous</a></div>
-                                    <div class="started_text"><a href="#">Apropos de nous</a></div>
+                                    <div class="started_text"><a href="about.html">Apropos de nous</a></div>
+                                    <div class="started_text active"><a href="contact.html">Contactez-nous</a></div>
                                  </div>
                               </div>
                            </div>
@@ -114,8 +114,8 @@
                                  <h1 class="banner_taital">EQUIPE DE PROFESSIONNELS QUALIFIES</h1>
                                  <p class="banner_text">L'entreprise est dotée d'une équipe de professionnels qualifiés et expérimentés dans le secteur de la construction et du génie civil... </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="#">Contactez-nous</a></div>
-                                    <div class="started_text"><a href="#">Apropos de nous</a></div>
+                                    <div class="started_text"><a href="about.html">Apropos de nous</a></div>
+                                    <div class="started_text active"><a href="contact.html">Contactez-nous</a></div>
                                  </div>
                               </div>
                            </div>
@@ -130,8 +130,9 @@
                                  <h1 class="banner_taital">SERVICES DE HAUTE QUALITE</h1>
                                  <p class="banner_text">Fournir un service de qualité tout en respectant les delais convenus et en offrant un rapport qualité-prix </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="contact.html">Contactez-nous</a></div>
                                     <div class="started_text"><a href="about.html">Apropos de nous</a></div>
+                                    <div class="started_text active"><a href="contact.html">Contactez-nous</a></div>
+                                 </div>
                                  </div>
                               </div>
                            </div>
@@ -139,13 +140,13 @@
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
                <i class="fa fa-angle-left"></i>
                </a>
-               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
                <i class="fa fa-angle-right"></i>
                </a>
-               
             </div>
          </div>
         <!-- banner section end -->
@@ -205,8 +206,9 @@
             <div class="row">
                <div class="col-md-6">
                   <h1 class="about_taital">Apropos de nous</h1>
-                  <p class="about_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All </p>
-                  <div class="read_bt_1"><a href="#">Read More</a></div>
+                  <p class="about_text">COTAB SARL est une entreprise de bâtiment, travaux publics et génie civil qui a été créée en 2018 en République Démocratique du Congo. L'entreprise est spécialisée dans la construction de bâtiments, la réalisation de travaux publics tels que la construction de routes, de ponts, d'aéroports, de canalisations, ainsi que dans le domaine du génie civil.
+                  </p>
+                  <div class="read_bt_1"><a href="about.html">En savoir plus</a></div>
                </div>
                <div class="col-md-6">
                   <div class="about_img">
@@ -224,7 +226,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <h1 class="projects_taital">Projects</h1>
+                  <h1 class="projects_taital">Projets</h1>
                   <div class="nav-tabs-navigation">
                      <div class="nav-tabs-wrapper">
                         <ul class="nav " data-tabs="tabs">
@@ -479,13 +481,15 @@
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <form action="">
+                     <form action="traitement.php" method="post" autocomplete="off">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required>
-                           <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="Phone Number" required> 
-                           <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email"required>
-                           <textarea class="massage-bt" placeholder="Votre Massage" rows="5" id="comment" name="Massage" required></textarea>
-                           <div class="send_bt"><a href="#">Envoi</a></div>
+                           <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required> 
+                           <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email" required>
+                           <input type="text" class="mail_text" name="Subject" id="subject" placeholder="Objet du message" required>
+                           <textarea class="message-bt" placeholder="Votre Message" rows="5" id="comment" name="Message" required></textarea>
+                           <input type="button" class="send_bt" value="Envoi">
+                           
                         </div>
                      </form>
                   </div>

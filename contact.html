@@ -102,22 +102,28 @@
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <form action="">
+                     <form action="traitement.php" method="post" autocomplete="off">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required>
                            <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="Phone Number" required> 
                            <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email"required>
-                           <textarea class="massage-bt" placeholder="Votre Massage" rows="5" id="comment" name="Massage" required></textarea>
-                           <div class="send_bt"><a href="#">Envoi</a></div>
+                           <input type="text" class="mail_text" name="Subject" id="subject" placeholder="Objet du message" required>
+                           <textarea class="message-bt" placeholder="Votre Message" rows="5" id="comment" name="Message" required></textarea>
+                           <input type="button" class="send_bt" value="Envoi">
+                           
                         </div>
                      </form>
+                     
                   </div>
+                  
+                  
                   <div class="col-md-6 padding_left_15">
                      <div class="contact_img"><img src="images/contact-img.png"></div>
                   </div>
                </div>
             </div>
          </div>
+         
          <div class="map_main">
             <div class="map-responsive">
                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.3913814234893!2d15.254501873352229!3d-4.3374025465699555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a319dfec550d3%3A0x8bc9a353148f145f!2sCOTAB%20SARL!5e0!3m2!1sfr!2scd!4v1721472381930!5m2!1sfr!2scd" width="600" height="600" frameborder="0" style="border:0;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
