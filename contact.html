@@ -99,7 +99,15 @@
          </div>
       </div>
       <!-- header section end -->
-      <!-- contact section start -->
+      <!-- <?php -->
+         <!-- if (isset($erreur)) { -->
+            <!-- echo "<p class='erreur'>$erreur</p>"; -->
+         <!-- } -->
+<!--  -->
+         <!-- if (isset($success)) { -->
+            <!-- echo "<p class='success'>$success</p>"; -->
+         <!-- } -->
+         <!-- ?> -->
       <!-- contact section start -->
       <div class="contact_section layout_padding">
          <div class="container">
@@ -120,7 +128,7 @@
                            <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email"required>
                            <input type="text" class="mail_text" name="Subject" id="subject" placeholder="Objet du message" required>
                            <textarea class="message-bt" placeholder="Votre Message" rows="5" id="comment" name="Message" required></textarea>
-                           <input type="button" class="send_bt" value="Envoi">
+                           <input type="submit"  name="submit" class="send_bt" value="Envoyer">
                            
                         </div>
                      </form>

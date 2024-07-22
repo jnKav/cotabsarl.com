@@ -113,13 +113,13 @@
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <form action="traitement_devis.php" method="post" autocomplete="off">
+                     <form action="traitement_devis.php" method="POST" autocomplete="off">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required>
                            <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="Phone Number" required> 
                            <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email"required>
                            <textarea class="message-bt" placeholder="Votre Message" rows="5" id="comment" name="Message" required></textarea>
-                           <input type="button" class="send_bt" value="Envoi">
+                           <input type="submit" name="submit" class="send_bt" value="Envoyer">
                            
                         </div>
                      </form>
