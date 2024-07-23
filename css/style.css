@@ -1117,7 +1117,8 @@ textarea#comment.message-bt::placeholder {
 
 .footer_section_2 {
     width: 100%;
-    float: left;
+    float: left; 
+    text-align: center;
 }
 
 .useful_text {
@@ -1251,13 +1252,15 @@ textarea#comment.message-bt::placeholder {
 
 .footer_menu_main {
     width: 100%;
-    /* float: left; */
+    float: left; 
+    
 }
 
 .footer_menu {
     width: 77%;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .footer_menu ul {
@@ -1265,6 +1268,7 @@ textarea#comment.message-bt::placeholder {
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .footer_menu li {
@@ -1272,10 +1276,12 @@ textarea#comment.message-bt::placeholder {
     color: #ffffff;
     padding: 5px 0px 0px 0px;
     flex-basis: 50%;
+    
 }
 
 .footer_menu li a {
     color: #ffffff;
+    
 }
 
 .footer_menu li a:hover {
