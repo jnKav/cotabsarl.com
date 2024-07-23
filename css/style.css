@@ -304,7 +304,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/banner-bg.jpg);
     height: auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -534,7 +534,7 @@ button {
 .about_img {
     width: 100%;
     float: left;
-    background-image: url(../images/about-img.png);
+    background-image: url(../images/about-img.jpg);
     height: auto;
     background-size: cover;
     padding: 0px 0px 0px 0px;
@@ -1251,7 +1251,7 @@ textarea#comment.message-bt::placeholder {
 
 .footer_menu_main {
     width: 100%;
-    float: left;
+    /* float: left; */
 }
 
 .footer_menu {
