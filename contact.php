@@ -48,6 +48,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       
+      
    </head>
    <body>
       <!-- Google Tag Manager (noscript) -->
@@ -90,7 +91,7 @@
                         <a class="nav-link" href="#">Projets</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.php">Contact</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -101,15 +102,16 @@
          </div>
       </div>
       <!-- header section end -->
-      <!-- <?php -->
-         <!-- if (isset($erreur)) { -->
-            <!-- echo "<p class='erreur'>$erreur</p>"; -->
-         <!-- } -->
-<!--  -->
-         <!-- if (isset($success)) { -->
-            <!-- echo "<p class='success'>$success</p>"; -->
-         <!-- } -->
-         <!-- ?> -->
+
+      <?php if (!empty($message)): ?>
+      
+        <div class="message <?php echo $message_class; ?>">
+            <?php echo $message; ?>
+        </div>
+      
+      <?php endif; ?>
+
+      
       <!-- contact section start -->
       <div class="contact_section layout_padding">
          <div class="container">
@@ -168,13 +170,13 @@
       <div class="contact_section_2">
          <div class="row">
             <div class="col-md-6">
-               <form action="traitement_devis.php" method="POST" autocomplete="off">
+               <form id="devisForm" action="traitement_devis.php" method="POST" autocomplete="off">
                   <div class="mail_section_1">
                      <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required autocomplete="off">
                      <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required autocomplete="off"> 
                      <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email" required autocomplete="off">
                      <textarea class="message-bt" placeholder="Votre Message" rows="10" id="comment" name="Message" required></textarea>
-                     <input type="button" class="send_bt" value="Envoyer">
+                     <input type="submit" name="submit" class="send_bt" value="Envoyer">
                      
                   </div>
                </form>
@@ -265,5 +267,25 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
+      
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      
+      <script>
+         $(document).ready(function() {
+            $('#devisForm').on('submit', function(e) {
+                  e.preventDefault();
+
+                  $.ajax({
+                     type: 'POST',
+                     url: 'traitement_devis.php',
+                     data: $(this).serialize(),
+                     success: function(response) {
+                        $('#myModal').modal('hide');
+                        window.location.href = 'index.html';
+                     }
+                  });
+            });
+         });
+      </script>
    </body>
 </html>

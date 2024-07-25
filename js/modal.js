@@ -1,4 +1,4 @@
-const modal = document.getElementById("myModal");
+const modal = document.getElementById("devisModal");
     const btn = document.getElementById("openModalBtn");
     const span = document.getElementsByClassName("close")[0];
 
@@ -15,3 +15,6 @@ const modal = document.getElementById("myModal");
             modal.style.display = "none";
         }
     }
+    
+    
+        

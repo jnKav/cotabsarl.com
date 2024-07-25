@@ -1124,6 +1124,7 @@ textarea#comment.message-bt::placeholder {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    
 }
 
 .close:hover,
@@ -1355,4 +1356,21 @@ textarea#comment.message-bt::placeholder {
 
 .margin_top90 {
     margin-top: 90px;
+}
+
+/* Message traiment formulaire */
+
+.message {
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
 }
