@@ -54,6 +54,6 @@
         $message="Il y a eu un problème avec votre soumission, veuillez réessayer.";
         $message_class='error';
     }
-    header("Location: contact.php");
+    header("Location: contact.html");
     exit();
 ?>

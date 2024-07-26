@@ -76,8 +76,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div class="logo"><a href="index.html"><img src="images/logo-1.png"></a></div>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
+                  <span class="navbar-toggler-icon"></span>
+                  </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                      <li class="nav-item">
@@ -91,7 +91,7 @@
                         <a class="nav-link" href="#">Projets</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -309,6 +309,7 @@
                      <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required autocomplete="off">
                      <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required autocomplete="off"> 
                      <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email" required autocomplete="off">
+                     <input type="text" class="mail_text" name="Subject" id="subject" value="Demande de Devis" hidden>
                      <textarea class="message-bt" placeholder="Votre Message" rows="10" id="comment" name="Message" required></textarea>
                      <input type="submit" name="submit" class="send_bt" value="Envoyer">
                      
@@ -401,7 +402,7 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
-
+      <script src="js/menuNav.js"></script>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       
       <script>
@@ -415,7 +416,7 @@
                      data: $(this).serialize(),
                      success: function(response) {
                         $('#myModal').modal('hide');
-                        window.location.href = 'index.html';
+                        window.location.href = 'projects.html';
                      }
                   });
             });

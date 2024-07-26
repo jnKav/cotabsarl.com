@@ -28,12 +28,12 @@
             $content = "Name: $name\n";
             $content .= "Telephone: $telephone\n";
             $content .= "E-mail: $email\n\n"; 
-            $content .= "Objet: Demande de Devis\n";
+            $content .= "Objet: $subject\n";
             $content .= "Message:\n --- $message\n";
 
             // Envoyer l'email
             $mail_to = "info@cotabsarl.com";
-            $objet = "Demande de Devis - $subject";
+            $objet = "COTAB SARL - $subject";
             $headers = "From: $name <$email>";
 
             
