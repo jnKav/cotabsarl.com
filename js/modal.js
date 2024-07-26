@@ -1,4 +1,4 @@
-const modal = document.getElementById("devisModal");
+const modal = document.getElementById("myModal");
     const btn = document.getElementById("openModalBtn");
     const span = document.getElementsByClassName("close")[0];
 
