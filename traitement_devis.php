@@ -54,5 +54,6 @@
         $message="Il y a eu un problème avec votre soumission, veuillez réessayer.";
         $message_class='error';
     }
-    
+    header("Location: index.html");
+    exit();
 ?>
