@@ -32,6 +32,8 @@
       <meta name="keywords" content="Construction, Réhabilitation, Rénnovation, Cloisionnement">
       <meta name="description" content="Construction's Technologies And Business est une entreprise de bâtiment, travaux publics et génie civil.">
       <meta name="author" content="Cotab Sarl">
+      
+      <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -94,7 +96,7 @@
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <div class="quote_btn"> <button type="button"></button> <a href="" id="openModalBtn" data-bs-toggle="modal" data-bs-target="myModal">Obtenir un devis</a></div>
+                     <div class="quote_btn"> <a href="#myModal" id="openModalBtn" data-toggle="modal">Obtenir un devis</a></div>
                   </form>
                </div>
             </nav>
@@ -191,33 +193,37 @@
 <!-- Modal section start -->
 <div class="modal" id="myModal" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
    <div class="container">
-      <span class="close">&times;</span>
+      <div class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+     </div>
       <div class="row">
          <div class="col-md-12">
             <h1 class="contact_taital">Besoin d'un devis?</h1>
          </div>
       </div>
-      
    </div>
-   <div class="container-fluid">
+
+   <div id="formMessage"></div>
+
+   <div class="container">
       <div class="contact_section_2">
          <div class="row">
-            <div class="col-md-6">
-               <form id="devisForm" action="traitement_devis.php" method="POST" autocomplete="off">
+            <div class="col-md-12">
+               <form id="devisForm" method="POST">
                   <div class="mail_section_1">
                      <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required autocomplete="off">
                      <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required autocomplete="off"> 
                      <input type="email" class="mail_text" placeholder="Votre E-mail" name="Email" required autocomplete="off">
                      <input type="text" class="mail_text" name="Subject" id="subject" value="Demande de Devis" hidden>
                      <textarea class="message-bt" placeholder="Votre Message" rows="10" id="comment" name="Message" required></textarea>
-                     <input type="submit"  name="submit" class="send_bt" value="Envoyer">
-                     
+                     <input type="submit" name="submit" class="send_bt" value="Envoyer">
                   </div>
+                  
                </form>
             </div>
-            <div class="col-md-6 padding_left_15">
-               <div class="contact_img"><img src="images/devis.png"></div>
-            </div>
+            <!-- <div class="col-md-6 padding_left_15"> -->
+               <!-- <div class="contact_img"><img src="images/devis.png"></div> -->
+            <!-- </div> -->
          </div>
       </div>
    </div>
@@ -297,9 +303,9 @@
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
-      
+      <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      
+      <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
       <script src="js/menuNav.js"></script>
 

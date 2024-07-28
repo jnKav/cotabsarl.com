@@ -33,8 +33,8 @@
       <meta name="keywords" content="Construction, Réhabilitation, Rénnovation, Cloisionnement">
       <meta name="description" content="Construction's Technologies And Business est une entreprise de bâtiment, travaux publics et génie civil.">
       <meta name="author" content="Cotab Sarl">
+            
       <!-- bootstrap css -->
-      
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -77,10 +77,10 @@
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo de l'entreprise"></a></div>
+               <div class="navbar-brand logo"><a href="index.html"><img src="images/logo.png" alt="Logo de l'entreprise"></a></div>
                
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+                  <span class="navbar-toggler-icon"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
@@ -99,7 +99,7 @@
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <div class="quote_btn"> <a href="" id="openModalBtn" data-bs-toggle="modal" data-bs-target="myModal">Obtenir un devis</a></div>
+                     <div class="quote_btn"> <a href="#myModal" id="openModalBtn" data-toggle="modal">Obtenir un devis</a></div>
                   </form>
                </div>
             </nav>
@@ -537,13 +537,15 @@
                   <h1 class="contact_taital">Besoin d'un devis?</h1>
                </div>
             </div>
-            
          </div>
-         <div class="container-fluid">
+
+         <div id="formMessage"></div>
+
+         <div class="container">
             <div class="contact_section_2">
                <div class="row">
-                  <div class="col-md-6">
-                     <form id="devisForm" action="traitement_devis.php" method="POST" autocomplete="off">
+                  <div class="col-md-12">
+                     <form id="devisForm" method="POST">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required autocomplete="off">
                            <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required autocomplete="off"> 
@@ -551,13 +553,13 @@
                            <input type="text" class="mail_text" name="Subject" id="subject" value="Demande de Devis" hidden>
                            <textarea class="message-bt" placeholder="Votre Message" rows="10" id="comment" name="Message" required></textarea>
                            <input type="submit" name="submit" class="send_bt" value="Envoyer">
-                           
                         </div>
+                        
                      </form>
                   </div>
-                  <div class="col-md-6 padding_left_15">
-                     <div class="contact_img"><img src="images/devis.png"></div>
-                  </div>
+                  <!-- <div class="col-md-6 padding_left_15"> -->
+                     <!-- <div class="contact_img"><img src="images/devis.png"></div> -->
+                  <!-- </div> -->
                </div>
             </div>
          </div>
@@ -637,10 +639,9 @@
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
-      
-      <script src="js/menuNav.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      
+      <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
       
       
@@ -652,7 +653,7 @@
 
                   $.ajax({
                      type: 'POST',
-                     url: 'traitement_devis.php',
+                     url: 'process_devis.php',
                      data: $(this).serialize(),
                      success: function(response) {
                         $('#myModal').modal('hide');

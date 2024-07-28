@@ -395,7 +395,8 @@ button {
 
 .quote_btn a:hover {
     background-color: #ffffff;
-    color: #252525;
+    color: #22427c;
+    font-weight: 600;
 }
 
 
@@ -1109,12 +1110,12 @@ textarea#comment.message-bt::placeholder {
     display: none; 
     position: fixed; 
     z-index: 99999; 
-    /* left: 0; */
+    left: 0;
     top: 0;
     margin: auto;
     padding-right: 20px;
-    width: auto; 
-    height: auto; 
+    width: 100%; 
+    height: 100%; 
     overflow: auto;
     background-color: rgb(255, 255, 255); 
     
