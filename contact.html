@@ -103,15 +103,6 @@
       </div>
       <!-- header section end -->
 
-      <?php if (!empty($message)): ?>
-      
-        <div class="message <?php echo $message_class; ?>">
-            <?php echo $message; ?>
-        </div>
-      
-      <?php endif; ?>
-
-      
       <!-- contact section start -->
       <div class="contact_section layout_padding">
          <div class="container">
@@ -121,11 +112,13 @@
                </div>
             </div>
          </div>
+         <div class="container" id="formComment"></div>
+
          <div class="container-fluid">
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <form action="traitement.php" method="post" autocomplete="off">
+                     <form  id="contactForm" method="post" autocomplete="off">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required>
                            <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required> 
@@ -168,7 +161,7 @@
       </div>
    </div>
 
-   <div id="formMessage"></div>
+   <div class="container" id="formMessage"></div>
 
    <div class="container">
       <div class="contact_section_2">
@@ -273,24 +266,10 @@
       <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
       <script src="js/menuNav.js"></script>
+      <script src="js/contactForm.js"></script>
       
       
-      <script>
-         $(document).ready(function() {
-            $('#devisForm').on('submit', function(e) {
-                  e.preventDefault();
-
-                  $.ajax({
-                     type: 'POST',
-                     url: 'processes_devis.php',
-                     data: $(this).serialize(),
-                     success: function(response) {
-                        $('#myModal').modal('hide');
-                        window.location.href = 'contact.html';
-                     }
-                  });
-            });
-         });
+      
       </script>
    </body>
 </html>

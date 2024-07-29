@@ -162,7 +162,7 @@
       </div>
    </div>
 
-   <div id="formMessage"></div>
+   <div class="container" id="formMessage"></div>
 
    <div class="container">
       <div class="contact_section_2">
@@ -268,23 +268,6 @@
     <script src="js/modal.js"></script>
     <script src="js/menuNav.js"></script>
     
-      
-      <script>
-         $(document).ready(function() {
-            $('#devisForm').on('submit', function(e) {
-                  e.preventDefault();
 
-                  $.ajax({
-                     type: 'POST',
-                     url: 'process_devis.php',
-                     data: $(this).serialize(),
-                     success: function(response) {
-                        $('#myModal').modal('hide');
-                        window.location.href = 'about.html';
-                     }
-                  });
-            });
-         });
-      </script>
   </body>
 </html>

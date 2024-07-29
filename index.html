@@ -498,11 +498,12 @@
                </div>
             </div>
          </div>
+         <div class="container" id="formMessages"></div>
          <div class="container">
             <div class="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
-                     <form action="traitement_devis.php" method="POST" autocomplete="off">
+                     <form id="devis" method="POST" autocomplete="off">
                         <div class="mail_section_1">
                            <input type="text" class="mail_text" placeholder="Votre nom complet" name="Name" required autocomplete="off">
                            <input type="text" class="mail_text" placeholder="Votre numéro de téléphone" name="PhoneNumber" required autocomplete="off"> 
@@ -539,7 +540,7 @@
             </div>
          </div>
 
-         <div id="formMessage"></div>
+         <div class="container" id="formMessage"></div>
 
          <div class="container">
             <div class="contact_section_2">
@@ -647,20 +648,34 @@
       
       
       <script>
-         $(document).ready(function() {
-            $('#devisForm').on('submit', function(e) {
-                  e.preventDefault();
-
-                  $.ajax({
-                     type: 'POST',
-                     url: 'process_devis.php',
-                     data: $(this).serialize(),
-                     success: function(response) {
-                        $('#myModal').modal('hide');
-                        window.location.href = 'index.html';
-                     }
-                  });
-            });
+         document.addEventListener('DOMContentLoaded', () => {
+            const form=document.getElementById('devis');
+            const formMessages = document.getElementById('formMessages');
+            
+            form.onsubmit = (event) => {
+               event.preventDefault();
+      
+               const formData = new FormData(form);
+      
+               fetch('process_devis.php', {
+                  method: 'POST',
+                  body: formData
+               })
+               .then(response => response.json())
+               .then(data => {
+                  if (data.success) {
+                     formMesages.textContent = 'Merci! Votre message a été envoyé.';
+                     form.reset();
+                  } else {
+                     formMessages.textContent = 'Oops! Un problème s\'est produit, nous n\'avons pas pu envoyer votre message. Veuillez réessayer.';
+                  }
+               })
+               .catch(error => {
+                  formMessages.textContent = 'Il y a eu un problème avec votre soumission, veuillez réessayer.';
+                  console.error('Error:', error);
+               });
+            };
+      
          });
       </script>
    </body>

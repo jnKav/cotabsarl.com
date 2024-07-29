@@ -31,8 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                formMessage.textContent = 'Merci! Votre message a été envoyé. Merci de nous avoir contacté!';
+                formMessage.textContent = 'Merci! Votre message a été envoyé.';
                 form.reset();
+                // Masquer le modal après 3 secondes.
+                setTimeout(()=> {
+                    modal.style.display ='none';
+                },3000);
             } else {
                 formMessage.textContent = 'Oops! Un problème s\'est produit, nous n\'avons pas pu envoyer votre message. Veuillez réessayer.';
             }
@@ -42,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         });
     };
-
-    
+   
 });
     
         
