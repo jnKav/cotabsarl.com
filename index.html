@@ -499,6 +499,7 @@
             </div>
          </div>
          <div class="container" id="formMessages"></div>
+
          <div class="container">
             <div class="contact_section_2">
                <div class="row">
@@ -644,39 +645,10 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
       <script src="js/modal.js"></script>
+      <script src="js/processDevis.js"></script>
       
       
       
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const form=document.getElementById('devis');
-            const formMessages = document.getElementById('formMessages');
-            
-            form.onsubmit = (event) => {
-               event.preventDefault();
       
-               const formData = new FormData(form);
-      
-               fetch('process_devis.php', {
-                  method: 'POST',
-                  body: formData
-               })
-               .then(response => response.json())
-               .then(data => {
-                  if (data.success) {
-                     formMesages.textContent = 'Merci! Votre message a été envoyé.';
-                     form.reset();
-                  } else {
-                     formMessages.textContent = 'Oops! Un problème s\'est produit, nous n\'avons pas pu envoyer votre message. Veuillez réessayer.';
-                  }
-               })
-               .catch(error => {
-                  formMessages.textContent = 'Il y a eu un problème avec votre soumission, veuillez réessayer.';
-                  console.error('Error:', error);
-               });
-            };
-      
-         });
-      </script>
    </body>
 </html>
