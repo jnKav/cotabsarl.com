@@ -36,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Masquer le modal après 3 secondes.
                 setTimeout(()=> {
                     modal.style.display ='none';
-                },3000);
+                    location.reload();
+                },2000);
             } else {
                 formMessage.textContent = 'Oops! Un problème s\'est produit, nous n\'avons pas pu envoyer votre message. Veuillez réessayer.';
             }
