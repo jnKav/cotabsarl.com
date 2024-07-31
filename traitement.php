@@ -9,10 +9,11 @@
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["Name"])));
         $telephone= trim($_POST['PhoneNumber']);
         $email = filter_var(trim($_POST["Email"]), FILTER_SANITIZE_EMAIL);
+        $profession= trim($_POST["Profession"]);
         $messageContent = trim($_POST["Message"]);
               
         // Valider les données du formulaire
-        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($telephone) OR empty($messageContent)) {
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($telephone) OR empty($profession)  OR empty($messageContent)) {
              
             echo json_encode(['success' => false, 'message' => 'Tous les champs sont obligatoires. Réessayer.']);
               
@@ -20,7 +21,8 @@
             // Préparer le corps du message
             $content = "Name: $name\n";
             $content .= "Telephone: $telephone\n";
-            $content .= "E-mail: $email\n\n"; 
+            $content .= "E-mail: $email\n";
+            $content .= "Profession: $profession\n\n"; 
             $content .= "Objet: $subject\n";
             $content .= "Message:\n --- $messageContent\n";
      
