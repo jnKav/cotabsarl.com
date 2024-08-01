@@ -25,10 +25,9 @@
     <!-- basic -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- mobile metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <!-- site metas -->
     <title>Apropos | Cotab Sarl</title>
     <meta name="keywords" content="Construction, Réhabilitation, Rénnovation, Cloisionnement">
@@ -316,7 +315,9 @@
       <div class="container">
          <div class="row">
             <div class="col-sm-12">
-               <p class="copyright_text"> &copy; 2024 COTAB SARL. Tous droits reservés.  </p>
+               <div class="col-sm-12">
+                  <p class="copyright_text"> &copy; <span id="year"></span> COTAB SARL. Tous droits reservés.  </p>
+               </div>
             </div>
          </div>
       </div>
@@ -330,6 +331,7 @@
     <script src="js/plugin.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/menuNav.js"></script>
+    <script src="js/copyright.js"></script>
     
 
   </body>
